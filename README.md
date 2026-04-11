@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 AI SaaS Platform
 
-## Getting Started
+A full-stack AI SaaS application built with **Next.js 13 App Router** that enables users to generate AI-powered content such as conversations, code, images, music, and videos.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+* 🤖 AI Chatbot (OpenAI)
+* 💻 Code Generation
+* 🖼️ Image Generation
+* 🎵 Music Generation (Replicate)
+* 🎬 Video Generation (Replicate)
+* 🔐 Authentication & User Management (Clerk)
+* 💳 Subscription & Payments (Stripe)
+* 📊 Dashboard with API usage tracking
+* ⚡ API limit control with UI counter
+* 🎯 Pro plan upgrade system
+* 📩 Customer support integration
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** Next.js 13, React, Tailwind CSS
+* **Backend:** Next.js API Routes / Server Actions
+* **Database:** PostgreSQL (Neon) + Prisma ORM
+* **Authentication:** Clerk
+* **Payments:** Stripe
+* **AI APIs:** OpenAI, Replicate
+* **Deployment:** Vercel
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/suchanda-ux/AI-Saas-Project.git
+cd AI-Saas-Project
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔑 Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env` file in the root directory and add:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key
+CLERK_SECRET_KEY=your_key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+OPENAI_API_KEY=your_key
+REPLICATE_API_TOKEN=your_key
 
-## Deploy on Vercel
+DATABASE_URL=your_database_url
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+STRIPE_API_KEY=your_key
+STRIPE_WEBHOOK_SECRET=your_key
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⚠️ **Important:** Do NOT commit your `.env` file to GitHub.
+
+---
+
+## 🌐 Live Demo
+
+Coming soon (will be deployed on Vercel)
+
+---
+
+## 📸 Screenshots
+
+(Add screenshots of your application here)
+
+---
+
+## 📚 What I Learned
+
+* Building scalable SaaS applications using Next.js 13
+* Integrating multiple AI APIs into a single platform
+* Implementing authentication and subscription systems
+* Managing API limits and user-based access
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repository and improve it.
+
+---
+
+## 📩 Contact
+
+**Suchanda Kundu**
+(Add your LinkedIn here)
+
+---
