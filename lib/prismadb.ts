@@ -4,8 +4,10 @@ declare global {
   var prisma: PrismaClient | undefined;
 };
 
-// @ts-ignore
-const prismadb = globalThis.prisma || new PrismaClient();
+const prismadb = globalThis.prisma || new PrismaClient(
+  // @ts-ignore
+  { datasourceUrl: process.env.DATABASE_URL! }
+);
 
 if (process.env.NODE_ENV !== "production") globalThis.prisma = prismadb;
 
