@@ -47,17 +47,15 @@ const VideoPage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
   try {
     setVideo(undefined);
-    //throw new Error("Something")
 
     const response = await axios.post("/api/video", values);
 
-    setVideo(response.data[0]);
+    setVideo(response.data.videoUrl);
     form.reset();
   } catch (error: any) {
     if (error?.response?.status === 403) {
-    proModal.onOpen();
-    }
-    else{
+      proModal.onOpen();
+    } else {
       toast.error("Something went wrong");
     }
     console.log(error);
@@ -65,7 +63,6 @@ const VideoPage = () => {
     router.refresh();
   }
 };
-
   return (
     <div>
       <Heading
