@@ -46,7 +46,7 @@ const ImagePage = () => {
     defaultValues: {
       prompt: "",
       amount: "1",
-      resolution: "512x512"
+      resolution: "1024x1024"
     }
   });
 
@@ -58,7 +58,7 @@ const ImagePage = () => {
     setImages([]);
 
     const response = await axios.post("/api/image", values);
-    const urls = response.data.map((image: { url: string }) => image.url);
+    const urls = response.data.map((image: { b64_json: string }) => `data:image/png;base64,${image.b64_json}`);
     // TODO: Open Pro Modal
     setImages(urls);
     form.reset();
@@ -214,6 +214,7 @@ const ImagePage = () => {
                  <Image
                    alt="Image"
                    fill
+                   unoptimized
                    src={src}
                   />
                 </div>
