@@ -61,27 +61,6 @@ http://localhost:3000
 
 ---
 
-## 🔑 Environment Variables
-
-Create a `.env` file in the root directory and add:
-
-```
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key
-CLERK_SECRET_KEY=your_key
-
-OPENAI_API_KEY=your_key
-REPLICATE_API_TOKEN=your_key
-
-DATABASE_URL=your_database_url
-
-STRIPE_API_KEY=your_key
-STRIPE_WEBHOOK_SECRET=your_key
-```
-
-⚠️ **Important:** Do NOT commit your `.env` file to GitHub.
-
----
-
 ## 🌐 Live Demo
 
 Coming soon (will be deployed on Vercel)
