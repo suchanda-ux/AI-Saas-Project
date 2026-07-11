@@ -5,7 +5,7 @@ import { increaseApiLimit, checkApiLimit } from "@/lib/api-limit";
 import { checkSubscription } from "@/lib/subscription";
 
 
-
+export const maxDuration = 60;
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -45,12 +45,15 @@ export async function POST(
     if (!freeTrial && !isPro) {
       return new NextResponse("Free trial has expired.", { status: 403 });
     }
+    console.log("[IMAGE_REQUEST]", { prompt, amount, resolution });
 
     const response = await openai.images.generate({
       prompt,
       n: parseInt(amount, 10),
       size: resolution,
     });
+    
+    console.log("[IMAGE_SUCCESS]");
     
     if (!isPro) {
     await increaseApiLimit();
