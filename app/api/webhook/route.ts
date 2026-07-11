@@ -45,9 +45,19 @@ if (event.type === "checkout.session.completed") {
   });
 }
 if (event.type === "invoice.payment_succeeded") {
-  const subscription = await stripe.subscriptions.retrieve(
-    session.subscription as string
-  );
+  const invoice = event.data.object as Stripe.Invoice & {
+    parent?: { subscription_details?: { subscription?: string } };
+    subscription?: string;
+  };
+
+  const subscriptionId =
+    invoice.subscription ?? invoice.parent?.subscription_details?.subscription;
+
+  if (!subscriptionId) {
+    return new NextResponse("Subscription id missing on invoice", { status: 400 });
+  }
+
+  const subscription = await stripe.subscriptions.retrieve(subscriptionId);
 
   await prismadb.userSubscription.update({
     where: {
