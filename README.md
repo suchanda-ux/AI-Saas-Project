@@ -69,7 +69,14 @@ Coming soon (will be deployed on Vercel)
 
 ## 📸 Screenshots
 
-(Add screenshots of your application here)
+![Homepage](Homepage.png)
+![Login](Login.png)
+![Dashboard](Dashboard.png)
+![Chat Generation](Chat%20Generation.png)
+![Code Generation](Code%20Generation.png)
+![Music Generation](Music%20Generation.png)
+![Video Generation](Video%20Generation.png)
+![Image Generation](Image%20Generation.png)
 
 ---
 
@@ -91,6 +98,6 @@ Feel free to fork this repository and improve it.
 ## 📩 Contact
 
 **Suchanda Kundu**
-(Add your LinkedIn here)
+https://www.linkedin.com/in/suchandakundu/
 
 ---
