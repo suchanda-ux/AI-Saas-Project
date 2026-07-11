@@ -63,7 +63,7 @@ http://localhost:3000
 
 ## 🌐 Live Demo
 
-Coming soon (will be deployed on Vercel)
+🔗 **[View Live Demo](https://ai-saas-project-eta.vercel.app/)**
 
 ---
 
